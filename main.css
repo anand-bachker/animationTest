@@ -52,6 +52,12 @@ body
 	background-color: #1a1940;
   background-image: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,153,212,0) calc(15% + 100px), rgba(0,99,138,0) calc(85% + 100px), rgba(0,0,0,0.15) 100%);
 }
+
+.crosshaircursor{
+	cursor: crosshair;
+}
+
+
 div.container {
 	display: flex;
 	justify-content: center;
@@ -105,6 +111,65 @@ div.bounce {
     left: 50%;
     text-align: center;
     color: white;
+}
+
+
+
+.ScoreBoard{
+	height: 10vh;
+	width: 21vw;
+	position: absolute;
+    transition: 1s;
+	margin-left: auto;
+	margin-right: auto;
+	top: 0;
+	border: 2px solid rgb(0, 0, 0);
+	z-index: 100;
+	background-color: #ffffff;
+}
+
+.makeGoneScoreBoard{
+	transform: translate(0, -100%);
+}
+
+.ScoreContainer{
+	padding-top: 1vh;
+	padding-left: 0.5vw;
+	display: flex;
+	flex-direction: row;
+}
+
+#correctHitScore{
+	font-size: 1.7vw;
+}
+
+#missedScore{
+	font-size: 1.7vw;
+}
+
+#accuracyScore{
+	padding-top: 2vh;
+	padding-left: 10px;
+	font-size: 1.7vw;
+}
+
+.TimeLeft{
+	height: 10vh;
+	width: 12vh;
+	position: absolute;
+    transition: 1s;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid rgb(0, 0, 0);
+	z-index: 100;
+	background-color: #ffffff;
+}
+#timeLeftText{
+	font-size: 1.7vw;
+	font-weight: bold;
 }
 
 /*# sourceMappingURL=main.css.map*/
