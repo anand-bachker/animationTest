@@ -20,20 +20,29 @@ body
 }
 
 .drawing-canvas {
-    position: absolute;
     background-color: #000000;
-    display: none;
     transition: 2s;
-    top: 0px;
-    right: 0px;
-    z-index: 3000;
     cursor: crosshair;
     touch-action: none;
-    transform: scale(0.2) translate(200%, -200%);
+}
+.strokecolor{
+	position: relative;
 }
 
+.drawingset{
+	display: none;
+    z-index: 3000;
+	transition: 1s;
+	position: absolute;
+	top: 0;
+	right: 0;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+
 .makegone{
-    transform: scale(0.2) translate(300%, -200%);
+    transform:  translate(300%, -200%);
 }
 
 
@@ -44,6 +53,7 @@ body
 	--violet: #da00f7;
 }
 	body {
+	overflow: "hidden";
 	margin: 0;
 	display: flex;
 	justify-content: center;
@@ -118,6 +128,7 @@ div.bounce {
 .ScoreBoard{
 	height: 10vh;
 	width: 21vw;
+	display: none;
 	position: absolute;
     transition: 1s;
 	margin-left: auto;
@@ -133,6 +144,7 @@ div.bounce {
 }
 
 .ScoreContainer{
+
 	padding-top: 1vh;
 	padding-left: 0.5vw;
 	display: flex;
@@ -160,16 +172,35 @@ div.bounce {
     transition: 1s;
 	top: 0;
 	left: 0;
-	display: flex;
+	display: none;
 	justify-content: center;
 	align-items: center;
 	border: 2px solid rgb(0, 0, 0);
 	z-index: 100;
 	background-color: #ffffff;
 }
+
+
 #timeLeftText{
 	font-size: 1.7vw;
 	font-weight: bold;
+}
+
+
+.controllerKeyBoard{
+	position: absolute;
+	z-index: 3;
+	width: 90vw;
+	bottom: 2vh;
+	display: none;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#KeyButton{
+	height: 40px;
+	width: 40px;
+	user-select: none;
 }
 
 /*# sourceMappingURL=main.css.map*/
